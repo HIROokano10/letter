@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+    
+  </a>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MY LOVE LETTER</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cursive', sans-serif;
+    }
+
+    body {
+      background-color: rgb(190, 236, 217);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .letter-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border: 2px solid #ff4f81;
+      border-radius: 10px;
+      width: 400px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 10;
+    }
+
+    .heart {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(45deg, #ff4f81, #ff7171);
+      position: relative;
+      margin: 0 auto 20px;
+      transform: rotate(-45deg);
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(45deg, #ff4f81, #ff7171);
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+    }
+
+    .heart::before {
+      left: 50px;
+    }
+
+    .heart::after {
+      top: -50px;
+      left: 0;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #ff4f81;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .signature {
+      font-size: 18px;
+      color: #ff4f81;
+      font-style: italic;
+    }
+
+    /* Mini Heart Animation */
+    .mini-heart {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: linear-gradient(45deg, #ff4f81, #ff7171);
+      transform: rotate(-45deg);
+      border-radius: 50% 50% 0 0;
+      animation: float 5s ease-in infinite;
+    }
+
+    .mini-heart::before,
+    .mini-heart::after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: linear-gradient(45deg, #ff4f81, #ff7171);
+      border-radius: 50%;
+    }
+
+    .mini-heart::before {
+      top: -7.5px;
+      left: 0;
+    }
+
+    .mini-heart::after {
+      left: 7.5px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5) rotate(-45deg);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(-100px) scale(1) rotate(-45deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-200px) scale(0.5) rotate(-45deg);
+      }
+    }
+
+    /* Randomly positioning hearts */
+    .mini-heart:nth-child(1) {
+      left: 10%;
+      animation-duration: 4s;
+    }
+
+    .mini-heart:nth-child(2) {
+      left: 25%;
+      animation-duration: 5s;
+    }
+
+    .mini-heart:nth-child(3) {
+      left: 50%;
+      animation-duration: 6s;
+    }
+
+    .mini-heart:nth-child(4) {
+      left: 75%;
+      animation-duration: 3s;
+    }
+
+    .mini-heart:nth-child(5) {
+      left: 90%;
+      animation-duration: 4.5s;
+    }
+
+    .mini-heart:nth-child(6) {
+      left: 35%;
+      animation-duration: 5.5s;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="letter-container">
+    <div class="heart"></div>
+    <h1>MY BELOVED NICOLE</h1>
+    <p class="message">
+      Roses are red,<br>
+      Violets are blue,<br>
+      Every moment spent with you,<br>
+      Feels like a dream come true.<br><br>
+      I cherish your smile, your touch, and your love.<br>
+     I Always love you, my one and only!
+    </p>
+    <p class="signature">With all my love,<br> OKANO hihi</p>
+    <a href="gallery.html"> click here </a>
+  </div>
+
+  <!-- Mini Hearts Floating Around -->
+  <div class="mini-heart"></div> 
+  <div class="mini-heart"></div>
+  <div class="mini-heart"></div>
+  <div class="mini-heart"></div>
+  <div class="mini-heart"></div>
+  <div class="mini-heart"></div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY LOVE GALLERY</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cursive', sans-serif;
+    }
+
+    body {
+      background-color: rgb(255, 229, 242);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border: 2px solid #ff6f91;
+      border-radius: 10px;
+      width: 400px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 10;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      transition: transform 0.5s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 26px;
+      color: #ff6f91;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .signature {
+      font-size: 18px;
+      color: #ff6f91;
+      font-style: italic;
+    }
+
+    /* Heart Animation */
+    .heart {
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(45deg, #ff6f91, #ff9e91);
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      transform: rotate(-45deg);
+      animation: pulse 3s infinite;
+      z-index: -1;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(45deg, #ff6f91, #ff9e91);
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+    }
+
+    .heart::before {
+      left: 50px;
+    }
+
+    .heart::after {
+      top: -50px;
+      left: 0;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1) rotate(-45deg);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1) rotate(-45deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1) rotate(-45deg);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="gallery-container">
+    <h1>Our Love Moment</h1>
+    <!-- Replace 'your-image-url.jpg' with your image -->
+    <img src="gallery.html.jpg" alt="Our Love Image">
+    <p>
+      This picture will forever remind me of our best moments together.<br>
+      Every moment with you feels like a chapter from a beautiful story.
+    </p>
+    <p class="signature">With love, Okano 💖</p>
+    <a href="letter.HTML"> click here </a>
+
+  </div>
+
+  <!-- Heart Decoration -->
+  <div class="heart"></div>
+
+</body>
+</html>
